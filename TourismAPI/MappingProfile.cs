@@ -2,23 +2,21 @@
 using Tourism.Repository.Models;
 using AutoMapper;
 
-namespace Tourism
+namespace Tourism;
+
+internal sealed class MappingProfile : Profile
 {
-    public class MappingProfile : Profile
+    public MappingProfile()
     {
-        public MappingProfile()
-        {
-            CreateMap<Branch, BranchDto>();
-            //CreateMap<BranchDto, Branch>();
-            CreateMap<CreateBranchDto, Branch>();
-            CreateMap<Branch, CreateBranchDto>();
+        CreateMap<Branch, BranchDto>();
+        CreateMap<CreateBranchDto, Branch>();
+        CreateMap<Branch, CreateBranchDto>();
 
-            CreateMap<UpdateBranchDto, Branch>();
-            CreateMap<Branch, UpdateBranchDto>();
+        CreateMap<UpdateBranchDto, Branch>();
+        CreateMap<Branch, UpdateBranchDto>();
 
-            CreateMap<CreateUserProfileDto, UserProfile>();
-            CreateMap<UserProfile, UserProfileDto>();
+        CreateMap<CreateUserProfileDto, UserProfile>();
+        CreateMap<UserProfile, UserProfileDto>();
 
-        }
     }
 }

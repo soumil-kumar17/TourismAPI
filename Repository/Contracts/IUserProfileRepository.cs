@@ -1,12 +1,11 @@
 ﻿using Tourism.Repository.Models;
 
-namespace Tourism.Repository.Contracts
-{
-    public interface IUserProfileRepository
-    {
+namespace Tourism.Repository.Contracts;
 
-        Task<bool> CreateUser(UserProfile user);
-        Task<IEnumerable<UserProfile>> GetAllUsers();
-        Task<UserProfile> GetUser(string userName);
-    }
+public interface IUserProfileRepository
+{
+
+    Task<bool> CreateUser(UserProfile user);
+    Task<IEnumerable<UserProfile>> GetAllUsers();
+    Task<UserProfile> GetUser(string userName);
 }

@@ -1,9 +1,8 @@
-﻿namespace Tourism.Repository.Contracts
+﻿namespace Tourism.Repository.Contracts;
+
+public interface IRepositoryWrapper
 {
-    public interface IRepositoryWrapper
-    {
-        IBranchRepository Branch { get; }
-        ISearchRepository Search { get; }
-        IUserProfileRepository User { get; }
-    }
+    IBranchRepository Branch { get; }
+    ISearchRepository Search { get; }
+    IUserProfileRepository User { get; }
 }
